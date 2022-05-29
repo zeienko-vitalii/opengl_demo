@@ -18,12 +18,12 @@ vec2 hash12(float t){
 }
 
 void main(){
-    vec2 uv = (gl_FragCoord.xy - 0.55 * resolution.xy) / resolution.y;
+    vec2 uv = (gl_FragCoord.xy - 1 * resolution.xy) / resolution.y;
     vec3 col = vec3(0.0);
     
     uv = rotate2D(uv, 3.14 / 2.0);
 
-    float r = 0.1;
+    float r = 0.15;
     for(float i=0.0; i < 60.0; i++){
 
         float factor = (sin(time) * 0.5 + 0.5) + 0.3;

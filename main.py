@@ -1,10 +1,11 @@
+import sys
 import moderngl_window as mglw
 
 # Using the latest shaders version of OpenGL available on MacOS
 # which is 410 core
 class App(mglw.WindowConfig):
-    # TODO: Set your screen resolution here
-    window_size = 3072, 1920
+    # TODO: Set your desired screen size here
+    window_size = 3072/4, 1920/4
     # resource_dir = 'shaders/mandelbort/'
     resource_dir = 'shaders/cardioid/'
 
@@ -29,5 +30,9 @@ class App(mglw.WindowConfig):
         self.quad.render(self.prog)
 
 
-if __name__ == '__main__':
+def main():
+    args = sys.argv[1:]
+    print(args)
     mglw.run_window_config(App)
+
+main()
