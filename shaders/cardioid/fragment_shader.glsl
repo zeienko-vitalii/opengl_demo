@@ -21,6 +21,7 @@ void main(){
     vec2 uv = (gl_FragCoord.xy - 1 * resolution.xy) / resolution.y;
     vec3 col = vec3(0.0);
     
+    // uv = rotate2D(uv, 3.14 * 1.5);
     uv = rotate2D(uv, 3.14 / 2.0);
 
     float r = 0.15;
@@ -30,8 +31,10 @@ void main(){
         i += factor;
 
         float a = i / 3;
-        float dx = 2 * r * cos(a) - r * cos(2 * a);
-        float dy = 2 * r * sin(a) - r * sin(2 * a);
+        // float dx = 2 * r * cos(a) - r * cos(2 * a);
+        // float dy = 2 * r * sin(a) - r * sin(2 * a);
+        float dx = 2 * r * cos(a) * (1 - cos(a));
+        float dy = 2 * r * sin(a) * (1 - cos(a));
 
         col += 0.01 * factor / length(uv - vec2(dx + 0.1, dy) - 0.02 * hash12(i));
     }

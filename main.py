@@ -5,9 +5,10 @@ import moderngl_window as mglw
 # which is 410 core
 class App(mglw.WindowConfig):
     # TODO: Set your desired screen size here
-    window_size = 3072/4, 1920/4
-    # resource_dir = 'shaders/mandelbort/'
+    window_size = 3072/2, 1920/2
+    # resource_dir = 'shaders/bean/'
     resource_dir = 'shaders/cardioid/'
+    # resource_dir = 'shaders/mandelbort/'
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

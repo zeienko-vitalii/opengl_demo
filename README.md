@@ -21,3 +21,5 @@ Now you can run: *`python3 main.py`*
 
 ### Mandelbort
 ![mandelbort](assets/mandelbort.png "Mandelbort")
+
+### [More is comming](https://en.wikipedia.org/wiki/Gallery_of_curves)

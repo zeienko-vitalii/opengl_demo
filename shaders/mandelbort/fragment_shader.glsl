@@ -13,12 +13,6 @@ vec2 rotate2D(vec2 uv, float a){
     return mat2(c, -s, s, c) * uv;
 }
 
-vec2 hash12(float t){
-    float x = fract(sin(t * 3453.329));
-    float y = fract(sin(t + x) * 3453.329);
-    return vec2(x, y);
-}
-
 vec3 hash13(float t){
     float x = fract(sin(t * 5625.246));
     float y = fract(sin(t + x) * 2216.486);
